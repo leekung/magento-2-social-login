@@ -172,6 +172,16 @@ class Social extends AbstractModel
             }
 
             $this->setAuthorCustomer($data['identifier'], $customer->getId(), $data['type']);
+
+	        // re-index customer_grid_flat
+	        $object = ObjectManager::getInstance();
+	        /** @var \Magento\Indexer\Model\Indexer\Collection $indexer */
+	        $indexer = $object->get('Magento\Indexer\Model\Indexer\CollectionFactory')->create();
+	        $indexerId = 'customer_grid';
+	        /** @var \Magento\Indexer\Model\Indexer\DependencyDecorator $customerIndexer */
+	        $customerIndexer = $object->get('Magento\Framework\Indexer\IndexerRegistry')->get($indexerId);
+	        $customerIndexer->reindexAll($indexerId);
+
         } catch (AlreadyExistsException $e) {
             throw new InputMismatchException(
                 __('A customer with the same email already exists in an associated website.')
