@@ -150,6 +150,10 @@ class Login extends Action
                 'identifier' => $userProfile->identifier,
                 'type' => $type
             ], $this->getUserData($userProfile));
+            // dob field - MM/DD/YYYY
+	        if (isset($userProfile->birthday)) {
+		        $user['dob'] = \DateTime::createFromFormat('m/d/Y', $userProfile->birthday)->format('j/m/Y');
+	        }
 
             $customer = $this->createCustomer($user, $type);
         }
