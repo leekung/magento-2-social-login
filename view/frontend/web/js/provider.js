@@ -28,7 +28,9 @@ define([
         customerData.invalidate(['customer']);
         customerData.reload(['customer'], true);
 
-        if (url !== '') {
+        if ($.cookie('login_redirect') != '') {
+            window.location.href = $.cookie('login_redirect');
+        } else if (url !== '') {
             window.location.href = url;
         } else {
             window.location.reload(true);
