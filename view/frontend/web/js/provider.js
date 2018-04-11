@@ -30,6 +30,7 @@ define([
 
         if ($.cookie('login_redirect') != '') {
             window.location.href = $.cookie('login_redirect');
+            $.cookie('login_redirect', null);
         } else if (url !== '') {
             window.location.href = url;
         } else {
