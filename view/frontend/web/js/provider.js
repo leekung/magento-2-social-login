@@ -14,7 +14,7 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_SocialLogin
- * @copyright   Copyright (c) 2018 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (http://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
@@ -24,6 +24,10 @@ define([
 ], function ($, customerData) {
     'use strict';
 
+    /**
+     * @param url
+     * @param windowObj
+     */
     window.socialCallback = function (url, windowObj) {
         customerData.invalidate(['customer']);
         customerData.reload(['customer'], true);

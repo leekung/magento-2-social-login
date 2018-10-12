@@ -13,13 +13,27 @@
 
 ## 1. Documentation
 
-- Download from our Live site: https://www.mageplaza.com/magento-2-social-login-extension/
-- Installation guide: https://www.mageplaza.com/install-magento-2-extension/
-- User Guide: https://docs.mageplaza.com/social-login-m2/index.html
-- Contribute on Github: https://github.com/mageplaza/magento-2-social-login/
-- Get Support: https://github.com/mageplaza/magento-2-social-login/issues
+- [Installation guide](https://www.mageplaza.com/install-magento-2-extension/)
+- [User Guide](https://docs.mageplaza.com/social-login-m2/index.html)
+- [Download from our Live site](https://www.mageplaza.com/magento-2-social-login-extension/)
+- [Get Free Support](https://github.com/mageplaza/magento-2-social-login/issues)
+- Get premium support from Mageplaza: [Purchase Support package](https://www.mageplaza.com/magento-2-extension-support-package/)
+- [Contribute on Github](https://github.com/mageplaza/magento-2-social-login/)
+- [Releases](https://github.com/mageplaza/magento-2-social-login/releases)
+- [License](https://www.mageplaza.com/LICENSE.txt)
+
 
 ## 2. How to install
+
+
+## ✓ Install via composer (recommend)
+Run the following command in Magento 2 root folder:
+
+```
+composer require mageplaza/magento-2-social-login
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy
+```
 
 ### ✓ Install ready-to-paste package
 
@@ -50,87 +64,7 @@ A: Please follow this guide: https://www.mageplaza.com/blog/magento-site-down.ht
 
 
 
-## 4. SWEET MAGEPLAZA EXTENSIONS TO BRING YOU MORE MONEY
-
-### [✓ One Step Checkout](https://www.mageplaza.com/magento-2-one-step-checkout-extension/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ ↑30% INCREASE CONVERSION RATE 
-
-☞ ↓66% DECREASE ABANDONMENT CART
-
-☞ ↓80% REDUCE CHECKOUT TIME
-
-### [✓ Layered Navigation](https://www.mageplaza.com/magento-2-layered-navigation-extension/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ ↑84% USER'S FILTERING EXPERIENCE
-
-☞ ↑25% CONVERSION RATE
-
-☞ ↓67% SHOPPING TIME
-
-### [✓ Frequently Bought Together](https://www.mageplaza.com/magento-2-frequently-bought-together/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Amazon Product Recommendation Solution
- 
-☞ AJAX loading for better performance
-
-☞ Support Custom Options and all product types
-
-
-
-### [✓ Gift Card](https://www.mageplaza.com/magento-2-gift-card-extension/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Physical, virtual or combined gift cards
- 
-☞ Different gift card values from prices
-
-☞ Send cards via email, SMS, post office or messenger
-
-
-### [✓ Who Bought This Also Bought](https://www.mageplaza.com/magento-2-who-bought-this-also-bought/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Display on Product Page, Category Page, Shopping Cart page
-
-☞ AJAX loading for better performance.
-
-☞ Flexible layout and design.
-
-
-### [✓ Social Login](https://www.mageplaza.com/magento-2-social-login-extension/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Increase signup rate up-to 30%
-
-☞ Supports 11 Types: Facebook, Google Plus, Twitter, Linkedin, Instagram, Yahoo, Github, Foursquare, VK, Live, Amazon
-
-☞ Easy custom design fit with your store design
-
-☞ [Social Login on Github](https://github.com/mageplaza/magento-2-social-login)
-
-
-
-### [✓ Shop By Brand](https://www.mageplaza.com/magento-2-shop-by-brand/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Fully Compatible with Layered Navigation
-
-☞ Instant Search brands
-
-☞ Import brands
-
-
-
-
-### [✓ Affiliate](https://www.mageplaza.com/magento-2-affiliate-extension/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Multiple Affiliate Campaigns
-
-☞ Smart Referral Links
-
-☞ Affiliate Report
-
-
-
-
-## 5. User guide
+## 4. User guide
 
 
 Customers are not patient enough to fill a lot of required information while those are available in social account as Facebook, LinkedIn, Instagram,.... [Magento 2 Social Login extension by Mageplaza](https://www.mageplaza.com/magento-2-social-login-extension/), your customers only need to click on the social button and all necessary information is completed automatically.That is the main reason why Magento Social Login extension is considered as the great solution for that convenience.
@@ -282,7 +216,7 @@ The login box will display as popup checkbox after clicking on Instagram Sign In
 
 
 
-## CHANGELOG 
+## 5. CHANGELOG 
 
 ### Social Login v2.3.7
 Released on  2017-08-09

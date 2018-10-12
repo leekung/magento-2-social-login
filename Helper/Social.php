@@ -15,7 +15,7 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_SocialLogin
- * @copyright   Copyright (c) 2018 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (http://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
@@ -129,7 +129,6 @@ class Social extends HelperData
      */
     public function getAppSecret($storeId = null)
     {
-
         $appSecret = trim($this->getConfigValue("sociallogin/{$this->_type}/app_secret", $storeId));
 
         return $appSecret;
@@ -180,7 +179,15 @@ class Social extends HelperData
      */
     public function getBaseAuthUrl()
     {
-        return $this->_getUrl('sociallogin/social/callback', array('_nosid' => true, '_scope' => $this->getScopeUrl()));
+        $storeId = $this->getScopeUrl();
+        /** @var \Magento\Store\Model\Store $store */
+        $store = $this->storeManager->getStore($storeId);
+
+        return $this->_getUrl('sociallogin/social/callback', [
+            '_nosid'  => true,
+            '_scope'  => $storeId,
+            '_secure' => $store->isUrlSecure()
+        ]);
     }
 
     /**

@@ -15,7 +15,7 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_SocialLogin
- * @copyright   Copyright (c) 2018 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (http://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
@@ -56,7 +56,7 @@ class Popup extends Template
         array $data = []
     )
     {
-        $this->helperData = $helperData;
+        $this->helperData      = $helperData;
         $this->customerSession = $customerSession;
 
         parent::__construct($context, $data);
@@ -80,11 +80,12 @@ class Popup extends Template
     public function getFormParams()
     {
         $params = [
-            'headerLink' => $this->getHeaderLink(),
-            'popupEffect' => $this->getPopupEffect(),
-            'formLoginUrl' => $this->getFormLoginUrl(),
+            'headerLink'    => $this->getHeaderLink(),
+            'popupEffect'   => $this->getPopupEffect(),
+            'formLoginUrl'  => $this->getFormLoginUrl(),
             'forgotFormUrl' => $this->getForgotFormUrl(),
-            'createFormUrl' => $this->getCreateFormUrl()
+            'createFormUrl' => $this->getCreateFormUrl(),
+            'fakeEmailUrl'  => $this->getFakeEmailUrl()
         ];
 
         return json_encode($params);
@@ -121,6 +122,14 @@ class Popup extends Template
     /**
      * @return string
      */
+    public function getFakeEmailUrl()
+    {
+        return $this->getUrl('sociallogin/social/email', ['_secure' => $this->isSecure()]);
+    }
+
+    /**
+     * @return string
+     */
     public function getForgotFormUrl()
     {
         return $this->getUrl('sociallogin/popup/forgot', ['_secure' => $this->isSecure()]);
@@ -143,6 +152,6 @@ class Popup extends Template
      */
     public function isSecure()
     {
-        return $this->helperData->isSecure() ? true : false;
+        return (bool) $this->helperData->isSecure();
     }
 }

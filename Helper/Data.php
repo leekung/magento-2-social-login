@@ -15,7 +15,7 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_SocialLogin
- * @copyright   Copyright (c) 2018 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (http://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
@@ -32,15 +32,6 @@ use Mageplaza\Core\Helper\AbstractData as CoreHelper;
 class Data extends CoreHelper
 {
     const CONFIG_MODULE_PATH = 'sociallogin';
-
-    /**
-     * @param null $storeId
-     * @return mixed
-     */
-    public function isCaptchaEnabled($storeId = null)
-    {
-        return $this->getConfigValue(static::CONFIG_MODULE_PATH . '/captcha/is_enabled', $storeId);
-    }
 
     /**
      * @param \Magento\Framework\App\RequestInterface $request
@@ -102,6 +93,15 @@ class Data extends CoreHelper
     public function getCustomCss($storeId = null)
     {
         return $this->getConfigGeneral('custom_css', $storeId);
+    }
+
+    /**
+     * @param null $storeId
+     * @return mixed
+     */
+    public function requireRealEmail($storeId = null)
+    {
+        return $this->getConfigGeneral('fake_email_require', $storeId);
     }
 
     /**

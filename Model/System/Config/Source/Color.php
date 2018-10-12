@@ -15,7 +15,7 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_SocialLogin
- * @copyright   Copyright (c) 2018 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (http://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
@@ -45,7 +45,7 @@ class Color implements ArrayInterface
                 'label' => $label
             ];
         }
-        
+
         return $options;
     }
 

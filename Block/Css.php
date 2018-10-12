@@ -15,7 +15,7 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_SocialLogin
- * @copyright   Copyright (c) 2018 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (http://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
@@ -65,7 +65,7 @@ class Css extends Template
                 $this->pageConfig->addPageAsset('Mageplaza_Core::css/grid-mageplaza.css');
                 $this->pageConfig->addPageAsset('Mageplaza_Core::css/font-awesome.min.css');
                 $this->pageConfig->addPageAsset('Mageplaza_Core::css/magnific-popup.css');
-            } elseif (in_array($this->_request->getFullActionName(), ['customer_account_login', 'customer_account_create'])) {
+            } else if (in_array($this->_request->getFullActionName(), ['customer_account_login', 'customer_account_create'])) {
                 $this->pageConfig->addPageAsset('Mageplaza_SocialLogin::css/style.css');
                 $this->pageConfig->addPageAsset('Mageplaza_Core::css/font-awesome.min.css');
             }
