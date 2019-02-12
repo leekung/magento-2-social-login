@@ -20,6 +20,13 @@ env:
   - MAGENTO_VERSION=2.2.2 TEST_SUITE=integration INTEGRATION_INDEX=1
   - MAGENTO_VERSION=2.2.2 TEST_SUITE=integration INTEGRATION_INDEX=2
   - MAGENTO_VERSION=2.2.2 TEST_SUITE=integration INTEGRATION_INDEX=3
+  - MAGENTO_VERSION=2.2.5 TEST_SUITE=integration INTEGRATION_INDEX=1
+  - MAGENTO_VERSION=2.2.5 TEST_SUITE=integration INTEGRATION_INDEX=2
+  - MAGENTO_VERSION=2.2.5 TEST_SUITE=integration INTEGRATION_INDEX=3
+  - MAGENTO_VERSION=2.2.6 TEST_SUITE=integration INTEGRATION_INDEX=1
+  - MAGENTO_VERSION=2.2.6 TEST_SUITE=integration INTEGRATION_INDEX=2
+  - MAGENTO_VERSION=2.2.6 TEST_SUITE=integration INTEGRATION_INDEX=3
+  
 matrix:
   exclude:
   - php: 7.0
@@ -47,8 +54,7 @@ before_install:
 - bash ./dev/travis/before_install.sh
 install:
 - composer install --no-interaction --prefer-dist
-- composer config repositories.test_target git https://github.com/${TRAVIS_REPO_SLUG}.git
-- composer require $COMPOSER_MODULE dev-$TRAVIS_BRANCH
+- composer require $COMPOSER_MODULE
 before_script:
 #- cp -f ${TRAVIS_BUILD_DIR}/dev/tests/integration/phpunit.xml.dist dev/tests/integration/
 - echo "vendor/$COMPOSER_MODULE" > dev/tests/static/testsuite/Magento/Test/Less/_files/whitelist/common.txt
